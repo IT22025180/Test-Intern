@@ -1,6 +1,9 @@
 const Posts = require('./BlogModel');
 const { DateTime } = require('luxon');
 
+
+//add post
+//author is fetching from frontend from storeduser's username(uname)
 exports.addPost = async (req, res) => {
     try {
 
@@ -21,6 +24,7 @@ exports.addPost = async (req, res) => {
     }
 }
 
+//get all posts 
 exports.getPosts = async (req, res) => {
     try {
         const allPosts = await Posts.find();
@@ -31,6 +35,7 @@ exports.getPosts = async (req, res) => {
     }
 }
 
+//get user defined post 
 exports.getUserPosts = async (req, res) => {
 
     const author = req.params.author;
@@ -48,6 +53,8 @@ exports.getUserPosts = async (req, res) => {
         });
 };
 
+
+//update posts
 exports.updatePosts = async (req, res) => {
 
     try {
@@ -74,6 +81,8 @@ exports.updatePosts = async (req, res) => {
     }
 }
 
+
+//deleteposts
 exports.deletePost = async (req, res) => {
     try {
         const { _id } = req.body;

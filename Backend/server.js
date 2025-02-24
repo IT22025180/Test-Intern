@@ -7,7 +7,7 @@ const routerP = require('./Blog/BlogRoute');
 //rest
 const app = express();
 
-const uri = 'mongodb+srv://vanuja2003:2003vanuja@cluster0.c8ywhvr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+const uri = 'mongodb+srv://vinnathvanuja:2003vanuja@testintern.y3tmy.mongodb.net/?retryWrites=true&w=majority&appName=TestIntern';
 
 const connect = async () => {
     try {

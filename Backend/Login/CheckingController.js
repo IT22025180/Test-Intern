@@ -2,6 +2,8 @@ const { Login } = require('./LoginModel');
 const bcrypt = require('bcrypt');
 const Joi = require('joi');
 
+
+//check login
 const checkLogin = async (req, res) => {
 
     try {
