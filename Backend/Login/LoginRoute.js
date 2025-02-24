@@ -3,8 +3,8 @@ const routerL = express.Router();
 const loginControlller = require('./LoginController');
 const checkingControlller = require('./CheckingController');
 
-routerL.post('/addLogin' , loginControlller.addLogin);
-routerL.post('/checkLogin' , checkingControlller.checkLogin);
+routerL.post('/addLogin', loginControlller.addLogin);
+routerL.post('/checkLogin', checkingControlller.checkLogin);
 
 
 module.exports = routerL;

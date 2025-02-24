@@ -1,6 +1,8 @@
 const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
+const routerL = require('./Login/LoginRoute');
+const routerP = require('./Blog/BlogRoute');
 
 //rest
 const app = express();
@@ -36,3 +38,6 @@ app.listen(PORT, () => {
     console.log(`Server is Running on ${PORT}`);
 });
 
+
+app.use('/api', routerL);
+app.use('/api', routerP);
